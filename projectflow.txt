@@ -11,3 +11,4 @@
 4. Add "experiments" dir for notebook experimentation and get started.
    Move to next step once you've pushed your embeddings to pinecone index via notebook.
 5. Add code to src.helper.py, src.prompt.py, store_index.py and app.py file
+6. Add templates.chat.html and statis.style.css
