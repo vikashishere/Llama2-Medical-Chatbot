@@ -7,3 +7,6 @@ pypdf
 python-dotenv
 pandas
 -e .
+
+# pip install --upgrade langchain-pinecone==0.0.3
+# pip install --upgrade pinecone-client

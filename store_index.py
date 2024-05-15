@@ -9,26 +9,30 @@ import itertools
 import pandas
 
 
+# Load environment variables
 load_dotenv()
 API_KEY = os.getenv("PINECONE_API_KEY")
 
-
+# Setting up the embedding dataframe
 extracted_data = load_pdf("data/")
 text_chunks = text_split(extracted_data)
 embeddings = download_hugging_face_embeddings()
 df = embedded_data(embeddings, text_chunks)
 
-# #Initializing the Pinecone
+# Check if the API key is loaded
+if not API_KEY:
+    raise ValueError("Pinecone API key not found. Please check your environment variables.")
+
+# Initialize Pinecone client
 pc = Pinecone(api_key=API_KEY)
-# index_name = "healthcare-chatbot2"
+
+# Define index name
 index_name = "test-my-code"
-# print(index_name)
 
 # Verify the index exists
 indexes = pc.list_indexes()
 if index_name not in indexes.names():
     # Create index if it doesn't exist (optional)
-    # logging.info(f"Create new index - {index_name}")
     pc.create_index(
         name=index_name,
         dimension=384,
