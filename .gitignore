@@ -159,3 +159,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 Llama2-model/
+.env
+Vikash_DS_CV_2024_MLOPs_Remote.pdf

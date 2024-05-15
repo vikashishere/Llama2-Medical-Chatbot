@@ -1,6 +1,6 @@
 *** Llama2-Medical-Chatbot ***
 
-1. Create a github repo and clone in local
+1. Create a github repo and clone in local, run your template.py
 2. Create a venv and install requirements.
     > conda create -n medchatbot python=3.8 -y
     > conda activate medchatbot (add requirements.txt and setup.py file)
@@ -8,3 +8,6 @@
 3. Next step is to download the Llama 2 Model: llama-2-7b-chat.ggmlv3.q4_0.bin
    From the following link: https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main
    Downloading this model to a "Llama2-model" dir therefore adding "Llama2-model/" to .gitignore
+4. Add "experiments" dir for notebook experimentation and get started.
+   Move to next step once you've pushed your embeddings to pinecone index via notebook.
+5. Add code to src.helper.py file
